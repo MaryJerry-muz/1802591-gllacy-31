@@ -11,9 +11,12 @@
   <body class="page-body">
   	<header class="main-header">
   		<nav class="main-navigation">
+
   			<a class="main-header-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина Глейси"></a>
+
   			<ul class="site-navigation">
-  				<li class="navigation-item catalog"><a href="catalog.html">Каталог</a>
+
+  				<li class="navigation-item catalog-item"><a href="catalog.html">Каталог</a>
   					<ul class="subnavigation">
   						<li class="subnavigation-item"><p>Новинки</p></li>
   						<li class="subnavigation-item"><a href="catalog.html">Сливочное</a></li>
@@ -27,6 +30,7 @@
   			</ul>
 
   			<ul class="user-navigation">
+
   				<li class="search-plate">
   					<a class="search-button" href="#">Поиск</a>
   					<ul class="search-field">
@@ -69,12 +73,13 @@
   					<a class="user-button cart-button" href="blank.html">Пусто</a>
   				</li>
   			</ul>
+
   			<div class="user-info">
 	  			<p class="hours">с 10 до 20, ежедневно</p>
 	  			<p class="number">
-	                <a href="tel:+78124502525"> 8 812 450-25-25 </a>
-	            </p>
-	        </div>
+	          <a href="tel:+78124502525"> 8 812 450-25-25 </a>
+	        </p>
+	      </div>
   		</nav>
   	</header>
 
@@ -84,6 +89,9 @@
 
     	<section class="slider">
     		<h2>Варианты мороженого</h2>
+        <input type="radio" name="slide" value="slide-1" id="slide1" checked>
+        <input type="radio" name="slide" value="slide-2" id="slide2">
+        <input type="radio" name="slide" value="slide-3" id="slide3">
     		<ul class="slider-list">
     			<li class="slider-item slide1">
     				<h3>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -102,9 +110,9 @@
     			</li>
     		</ul>
     		<div class="slider-controls">
-    			<input type="radio" name="slide" value="slide-1" checked>
-    			<input type="radio" name="slide" value="slide-2">
-    			<input type="radio" name="slide" value="slide-3">
+    			<label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
     		</div>
     	</section>
 
@@ -164,45 +172,51 @@
 
     	<section class="about-store">
     		<h2>О магазине</h2>
-    		<p class="about-store-lead">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-    		<ul class="about-store-list">
-    			<li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-    			<li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-    			<li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-    			<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-    		</ul>
+        <div class="about-store-wrapper">
+      		<p class="about-store-lead">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+      		<ul class="about-store-list">
+      			<li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+      			<li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+      			<li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+      			<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+      		</ul>
+        </div>
     	</section>
 
     	<section class="news-info">
     		<h2>Новости</h2>
-    		<article class="news">
-    			<h3>Новое в нашем блоге</h3>
-    			<a class="news-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-    		</article>
-    		<div class="subscribe-form">
-	    		<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-	    		<form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
-	    			<label for="subscribe-email">Электронная почта</label>
-	              	<input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
-	    			<button class="button" type="submit">Отправить</button>
-	    		</form>
-    		</div>
+        <div class="news-wrapper">
+      		<article class="news">
+      			<h3>Новое в нашем блоге</h3>
+      			<a class="news-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      		</article>
+      		<div class="subscribe-form">
+  	    		<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+  	    		<form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
+  	    			<label for="subscribe-email">Электронная почта</label>
+  	              	<input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
+  	    			<button class="button" type="submit">Отправить</button>
+  	    		</form>
+      		</div>
+        </div>
     	</section>
 
     	<section class="map">
-	    	<h2>Как добраться</h2>
-    		<div class="map-help">
-	    		<p class="address">
-	    			Адрес главного офиса и офлайн-магазина:
-	    			<span class="bold">наб. Реки Карповки, 5 лит П, Санкт-Петербург</span>
-	    		</p>
-	    		<p class="contacts">
-	    			Для заказов по телефону:
-	    			<span class="bold">+7 800 555-86-28</span> 
-	    			(с 10 до 20 ежедневно)
-	    		</p>
-	    		<a class="button" href="#">Форма обратной связи</a>
-    		</div>
+        <div class="map-wrapper">
+  	    	<h2>Как добраться</h2>
+      		<div class="map-help">
+  	    		<p class="address">
+  	    			Адрес главного офиса и офлайн-магазина:
+  	    			<span class="bold">наб. Реки Карповки, 5 лит П, Санкт-Петербург</span>
+  	    		</p>
+  	    		<p class="contacts">
+  	    			Для заказов по телефону:
+  	    			<span class="bold">+7 800 555-86-28</span> 
+  	    			(с 10 до 20 ежедневно)
+  	    		</p>
+  	    		<a class="button" href="#">Форма обратной связи</a>
+      		</div>
+        </div>
     	</section>
     </main>
 
@@ -240,10 +254,10 @@
 	            <img src="img/logo_HTML_Academy.svg" width="107.89" height="30.99" alt="Логотип HTML Academy">
 	          </a>
 	          <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
-        </div>
+      </div>
     </footer>
 
-    <section class="callback-modal">
+    <!-- <section class="callback-modal">
     	<h2>Обратная связь</h2>
     	<p class="callback-title">Мы обязательно вам ответим!</p>
     	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
@@ -261,6 +275,6 @@
 	    	<button class="button" type="submit">Отправить</button>
     	</form>
     	<button class="modal-close" type="button">Закрыть</button>
-    </section>
+    </section> -->
   </body>
 </html>
