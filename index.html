@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
+
+    <input type="radio" name="slide" value="slide-1" id="slide1" checked>
+    <input type="radio" name="slide" value="slide-2" id="slide2">
+    <input type="radio" name="slide" value="slide-3" id="slide3">
+
+    <div class="site-wrapper">
+
   	<header class="main-header">
   		<nav class="main-navigation">
 
@@ -76,9 +83,7 @@
 
   			<div class="user-info">
 	  			<p class="hours">с 10 до 20, ежедневно</p>
-	  			<p class="number">
-	          <a href="tel:+78124502525"> 8 812 450-25-25 </a>
-	        </p>
+	        <a class="number" href="tel:+78124502525"> 8 812 450-25-25 </a>
 	      </div>
   		</nav>
   	</header>
@@ -88,10 +93,8 @@
     	<h1>Интернет-магазин мороженого Gllacy</h1>
 
     	<section class="slider">
-    		<h2>Варианты мороженого</h2>
-        <input type="radio" name="slide" value="slide-1" id="slide1" checked>
-        <input type="radio" name="slide" value="slide-2" id="slide2">
-        <input type="radio" name="slide" value="slide-3" id="slide3">
+    		<h2>Варианты мороженого</h2>        
+        
     		<ul class="slider-list">
     			<li class="slider-item slide1">
     				<h3>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -191,32 +194,31 @@
       			<a class="news-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       		</article>
       		<div class="subscribe-form">
+            <div class="subscribe-wrapper">
   	    		<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
   	    		<form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
   	    			<label for="subscribe-email">Электронная почта</label>
-  	              	<input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
+  	          <input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
   	    			<button class="button" type="submit">Отправить</button>
   	    		</form>
+            </div>
       		</div>
         </div>
     	</section>
 
     	<section class="map">
-        <div class="map-wrapper">
   	    	<h2>Как добраться</h2>
       		<div class="map-help">
-  	    		<p class="address">
-  	    			Адрес главного офиса и офлайн-магазина:
-  	    			<span class="bold">наб. Реки Карповки, 5 лит П, Санкт-Петербург</span>
+  	    		<p class="address">Адрес главного офиса <br>и офлайн-магазина:
+  	    			<strong>наб. Реки Карповки, 
+              5 лит П, Санкт-Петербург</strong>
   	    		</p>
-  	    		<p class="contacts">
-  	    			Для заказов по телефону:
-  	    			<span class="bold">+7 800 555-86-28</span> 
+  	    		<p class="contacts">Для заказов по телефону:
+  	    			<strong>+7 800 555-86-28</strong> 
   	    			(с 10 до 20 ежедневно)
   	    		</p>
   	    		<a class="button" href="#">Форма обратной связи</a>
       		</div>
-        </div>
     	</section>
     </main>
 
@@ -256,6 +258,8 @@
 	          <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
       </div>
     </footer>
+    </div>
+
 
     <!-- <section class="callback-modal">
     	<h2>Обратная связь</h2>

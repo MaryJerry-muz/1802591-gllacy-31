@@ -38,13 +38,11 @@ a {
 	color: var(--basic-white);
 }
 
-/*  Grid  */
+/*  ______  */
 
 .page {
 	height: 100%;
 }
-
-
 
 .container {
 	width: 1146px;
@@ -52,28 +50,20 @@ a {
 	padding: 0 10px;
 }
 
-.slider-list {
-  	grid-row: 1 / -1;
-}
-
-.slider-controls {
-	justify-self: start;
-}
-
-
-
-
 
 /*   ____________    */
+
+.main-header {
+	width: 1146px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
 
 .main-navigation {
 	line-height: 18px;
 
 	display: grid;
 	grid-template-columns: 154px 1fr min-content;
-	width: 1146px;
-	margin: 0 auto;
-	padding: 0 10px; 
 }
 
 .main-header-logo {
@@ -83,10 +73,14 @@ a {
 .site-navigation {
 	font-weight: 700;
 	list-style: none;
+
 	margin: 0;
 	padding: 0;
 	margin-left: 24px;
-	margin-top: 9px;
+	margin-top: 32px;
+
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .subnavigation {
@@ -102,6 +96,10 @@ a {
 	background-color: var(--basic-dull-red);
 	text-decoration: none;
 	border-radius: 26px;
+}
+
+.navigation-item {
+	margin-right: 24px;
 }
 
 .navigation-item:hover > a {
@@ -158,7 +156,14 @@ a {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 500;
-	text-align: right;
+
+	display: flex;
+	margin: 0;
+	margin-top: 23px;
+}
+
+.user-navigation li {
+	margin-right: 10px;
 }
 
 .user-info {
@@ -179,16 +184,14 @@ a {
 }
 
 .number {
+	text-decoration: none;
 	font-size: 22px;
 	line-height: 24px;
 	margin-top: 8px;
+	margin-bottom: 0;
 
 	grid-column: 2 / 3;
 	grid-row: 2 / 3;
-}
-
-.number a {
-	text-decoration: none;
 }
 
 .number a:hover,
@@ -360,8 +363,8 @@ a {
 
 .slider {
 	text-align: center;
-	display: grid;
-	grid-template-rows: 1fr min-content;
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 .slider h3 {
@@ -369,10 +372,12 @@ a {
 	line-height: 60px;
 	font-weight: 700;
 
-
-	
 	width: 672px;
 	word-wrap: wrap;
+}
+
+.slider h2 {
+	width: min-content;
 }
 
 .slider-item {
@@ -384,10 +389,17 @@ a {
 	font-size: 32px;
 	line-height: 44px;
 	text-decoration: none;
+	/*padding: 9px 23px;*/
 }
 
-.slider > input {
+.page-body > input {
 	display: none;
+}
+
+.slider-controls {
+	width: 80px;
+	align-self: flex-end;
+	flex-grow: 1;
 }
 
 .slider-controls label {
@@ -396,7 +408,6 @@ a {
 	width: 21px;
 	height: 21px;
 	margin-right: 8px;
-	background-color: transparent;
 	border: 2px solid var(--basic-white);
 	border-radius: 50%;
 }
@@ -409,18 +420,25 @@ a {
 	background-color: var(--basic-white);
 }
 
-#slide1:checked ~ .slider-controls label:nth-child(1),
-#slide2:checked ~ .slider-controls label:nth-child(2),
-#slide3:checked ~ .slider-controls label:nth-child(3) {
+#slide1:checked ~ .site-wrapper label:nth-child(1),
+#slide2:checked ~ .site-wrapper label:nth-child(2),
+#slide3:checked ~ .site-wrapper label:nth-child(3) {
 	background-color: var(--basic-white);
 }
 
-#slide1:checked ~ .slider-list .slide1,
-#slide2:checked ~ .slider-list .slide2,
-#slide3:checked ~ .slider-list .slide3 {
+#slide1:checked ~ .site-wrapper .slide1,
+#slide2:checked ~ .site-wrapper .slide2,
+#slide3:checked ~ .site-wrapper .slide3 {
 	display: block;
 }
 
+#slide2:checked ~ .site-wrapper {
+	background-color: var(--basic-blue);
+}
+
+#slide3:checked ~ .site-wrapper {
+	background-color: var(--basic-brown);
+}
 
 
 
@@ -429,25 +447,40 @@ a {
 	grid-template-columns: 1fr 1fr;
 	column-gap: 26px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0;
 	margin-bottom: 40px;
-
 }
 
 .promo-item {
+	display: flex;
+	flex-direction: column;
+	padding-right: 22px;
+
 	list-style: none;
 	font-size: 18px;
 	font-weight: 700;
+	min-height: 229px;
 }
 
 .promo h3 {
+	margin: 16px;
 	font-size: 35px;
 	line-height: 41px;
 }
 
 .promo-item .button {
+	align-self: flex-end;
+
 	line-height: 24px;
 	text-decoration: none;
+	padding: 15px 22px;
+	margin-top: auto;
+	margin-bottom: 22px;
+}
+
+.promo-item p {
+	margin: 0;
+	margin-left: 16px;
 }
 
 .raspberry {
@@ -474,37 +507,71 @@ a {
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 26px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0;
 	margin-bottom: 40px;
 }
 
 .ice-cream-card {
+	position: relative;
 	list-style: none;
 	font-size: 30px;
 	line-height: 35px;
 	font-weight: 700;
+
+	display: flex;
+	flex-direction: column;
 }
 
-/*.ice-cream-card:hover {
+.ice-cream-card::after {
+	content: "";
+	position: absolute;
+	display: none;
+	z-index: 3;
+	top: -6px;
+	left: -13px;
+	
 	background: var(--basic-white);
 	opacity: 0.2;
 	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-}*/
+	height: 402px;
+	width: 293px;
+}
+
+.ice-cream-card:hover::after {
+	display: block;
+}
 
 .ice-cream-pic {
 	max-width: 100%;
   	height: auto;
+  	margin-bottom: 13px;
+	z-index: 6;
 }
 
 .ice-cream-card .button {
+	display: none;
+	position: absolute;
+	z-index: 6;
+	bottom: -55px;
+	left: 33px;
+
 	line-height: 24px;
 	text-decoration: none;
-	display: none;
+	padding: 12px 16px;
 }
 
 .ice-cream-card:hover .button {
 	display: block;
+}
+
+.price {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 216px;
+	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+	z-index: 7;
 }
 
 .price-tag {
@@ -517,6 +584,7 @@ a {
 	line-height: 22px;
 	font-weight: 500;
 	text-align: center;
+	z-index: 6;
 }
 
 .description:hover,
@@ -529,24 +597,21 @@ a {
 
 .about-store-wrapper {
 	display: grid;
-	width: 1146px;
-	margin: 0 auto;
-	padding: 0 10px;
 	grid-template-rows: min-content 1fr;
-	margin-bottom: 40px;
-}
 
-.about-store h2 {
-	margin: 0;
-}
-
-.about-store {
 	background: url(../img/backgrounds/waffle.png) no-repeat;
 	background-color: #f5efdc;
 	border-radius: 16px;
 	color: var(--basic-black);
 	font-size: 24px;
 	line-height: 30px;
+	padding: 24px 20px;
+}
+
+.about-store-wrapper p {
+	margin: 0;
+	margin-bottom: 21px;
+	padding: 0; 
 }
 
 .about-store-list {
@@ -554,8 +619,9 @@ a {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	column-gap: 26px;
+	row-gap: 33px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0;
 }
 
 .about-store-list li {
@@ -563,7 +629,8 @@ a {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
-	margin-bottom: 33px;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -573,7 +640,7 @@ a {
 	grid-template-columns: 1fr 1fr;
 	column-gap: 26px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0;
 	margin-bottom: 40px;
 }
 
@@ -581,13 +648,21 @@ a {
 	background: url("../img/backgrounds/strawberry.jpg") no-repeat;
 	background-color: var(--basic-light-grey);
 	border-radius: 16px;
+	padding: 0 20px;
+	padding-right: 253px;
+	min-height: 220px;
+	
 }
 
 .news h3 {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--basic-black);
+	margin: 0;
+	padding: 0;
+	margin-top: 23px;
+	margin-bottom: 15px;
 }
 
 .news-caption {
@@ -603,19 +678,32 @@ a {
 }
 
 
+
 .subscribe-form {
 	background: url("../img/backgrounds/mail.png") no-repeat;
+	border-radius: 16px;
+	padding: 5px 6px;
+}
+
+.subscribe-wrapper {
 	background-color: var(--basic-light-grey);
 	border-radius: 16px;
 	font-weight: 400;
 	color: var(--basic-dark-grey);
+	padding: 29px 20px;
+}
+
+.subscribe-wrapper p {
+	margin: 0;
+	padding: 0;
 }
 
 .subscribe-form input {
 	border: 1px solid var(--basic-extra-grey);
 	line-height: 20px;
 	font-weight: 700;
-	background-color: var(--basic-white);	
+	background-color: var(--basic-white);
+	margin-top: 46px;	
 }
 
 .subscribe-form input:hover {
@@ -626,32 +714,27 @@ a {
 	border: 2px solid var(--basic-extra-blue);
 }
 
-.subscribe .button {
-	line-height: 24px;
+.subscribe-wrapper .button {
+	padding: 10px 19px;
 }
 
-/*display: grid;
-	grid-template-columns: 1fr 306px;
-	grid-template-rows: 430px;
-	margin: 0 auto;
-	padding: 0 10px*/
+
 
 .map {
 	background: url("../img/map.png") no-repeat;
 	width: 100%;
 	height: 430px;
-}
-
-.map-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 306px;
+	position: relative;
 }
 
 .map-help {
-	display: grid;
-	grid-template-rows: 1fr 1fr min-content;
+	position: absolute;
+	width: 303px;
+	right: 27px;
+	top: 62px;
+	padding: 31px 25px;
+	box-sizing: border-box;
 
-	margin: 62px 27px;
 	background-color: #FEFEFE;
 	border-radius: 16px;
 	font-size: 14px;
@@ -661,24 +744,24 @@ a {
 }
 
 .map-help p {
-	margin: 32px 25px;
-	margin-bottom: 0;
-}
-
-.contacts {
-	margin-top: 30;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 30px;
+	white-space: pre-line;
 }
 
 .map-help .button {
+	display: block;
+	box-sizing: border-box;
 	line-height: 24px;
 	margin: 31px 25px;
-	margin-top: 0;
+	margin: 0;
+	padding: 13px 28px;
 }
 
-.bold {
+.map-help strong {
 	font-size: 18px;
 	line-height: 24px;
-	font-weight: 700;
 }
 
 
@@ -796,6 +879,7 @@ a {
 
 	grid-row: 2 / 3;
 	justify-self: start;
+	margin-top: 8px;
 	margin-bottom: 0;
 }
 
