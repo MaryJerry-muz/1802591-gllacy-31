@@ -932,6 +932,8 @@ h1 {
 	font-weight: 500;
 	list-style: none;
 	text-align: right;
+	margin-top: 80px;
+	margin-bottom: 48px;
 }
 
 .pagination-item {
