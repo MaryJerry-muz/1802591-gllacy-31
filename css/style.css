@@ -241,6 +241,20 @@ a {
 
 
 
+.login {
+	position: relative;
+}
+
+.login-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: min-content min-content 1fr;
+}
+
+.login-item {
+	grid-column: 1 / -1;
+}
+
 .login-button:hover {
 	background-color: var(--basic-white);
 	color: var(--basic-black);
@@ -248,9 +262,21 @@ a {
 
 .login-form {
 	display: none;
+	position: absolute;
 	background-color: var(--basic-light-grey);
 	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
 	border-radius: 4px;
+	padding-left: 19px;
+	padding-right: 16px;
+
+}
+
+.login-wrapper .button {
+	grid-column: 1 / 2;
+}
+
+.links {
+	grid-column: 2 / 3;
 }
 
 .login:hover .login-form {
@@ -261,7 +287,8 @@ a {
 	border: 1px solid var(--basic-extra-grey);
 	line-height: 20px;
 	font-weight: 700;
-	background-color: var(--basic-white);	
+	background-color: var(--basic-white);
+	margin: 20px 0;
 }
 
 .login-form input:hover {
@@ -392,8 +419,8 @@ a {
 	/*padding: 9px 23px;*/
 }
 
-.page-body > input {
-	display: none;
+.page-body .visually-hidden {
+	visibility: hidden;
 }
 
 .slider-controls {
@@ -471,9 +498,8 @@ a {
 .promo-item .button {
 	align-self: flex-end;
 
-	line-height: 24px;
 	text-decoration: none;
-	padding: 15px 22px;
+	padding: 12px 22px;
 	margin-top: auto;
 	margin-bottom: 22px;
 }
@@ -534,8 +560,8 @@ a {
 	opacity: 0.2;
 	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	height: 402px;
-	width: 293px;
+	height: calc(100% + 78px);
+	width: calc(100% + 26px);
 }
 
 .ice-cream-card:hover::after {
@@ -554,7 +580,8 @@ a {
 	position: absolute;
 	z-index: 6;
 	bottom: -55px;
-	left: 33px;
+	left: 50%;
+	transform: translateX(-50%);
 
 	line-height: 24px;
 	text-decoration: none;
@@ -599,7 +626,7 @@ a {
 	display: grid;
 	grid-template-rows: min-content 1fr;
 
-	background: url(../img/backgrounds/waffle.png) no-repeat;
+	background: url(../img/backgrounds/waffle-pattern.png) repeat;
 	background-color: #f5efdc;
 	border-radius: 16px;
 	color: var(--basic-black);
@@ -682,7 +709,7 @@ a {
 .subscribe-form {
 	background: url("../img/backgrounds/mail.png") no-repeat;
 	border-radius: 16px;
-	padding: 5px 6px;
+	padding: 0 6px;
 }
 
 .subscribe-wrapper {
@@ -690,12 +717,16 @@ a {
 	border-radius: 16px;
 	font-weight: 400;
 	color: var(--basic-dark-grey);
-	padding: 29px 20px;
+	height: calc(100% - 10px);
+	margin-top: 5px;
+	padding: 29px 16px;
+	box-sizing: border-box;
 }
 
 .subscribe-wrapper p {
 	margin: 0;
 	padding: 0;
+	padding-left: 4px;
 }
 
 .subscribe-form input {
@@ -722,9 +753,10 @@ a {
 
 .map {
 	background: url("../img/map.png") no-repeat;
-	width: 100%;
+	width: 1200px;
 	height: 430px;
 	position: relative;
+	margin: 0 auto;
 }
 
 .map-help {

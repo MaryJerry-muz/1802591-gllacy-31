@@ -10,9 +10,9 @@
   </head>
   <body class="page-body">
 
-    <input type="radio" name="slide" value="slide-1" id="slide1" checked>
-    <input type="radio" name="slide" value="slide-2" id="slide2">
-    <input type="radio" name="slide" value="slide-3" id="slide3">
+    <input class="visually-hidden" type="radio" name="slide" value="slide-1" id="slide1" checked>
+    <input class="visually-hidden" type="radio" name="slide" value="slide-2" id="slide2">
+    <input class="visually-hidden" type="radio" name="slide" value="slide-3" id="slide3">
 
     <div class="site-wrapper">
 
@@ -56,21 +56,23 @@
   						<li>
   							<h2>Личный кабинет</h2>
   							<form method="post" action="https://echo.htmlacademy.ru">
-  								<p class="login-item">
-  									<label>
-  										Электронная почта <input type="email" name="login-email" placeholder="email@example.com">
-  									</label>
-  								</p>
-  								<p class="login-item">
-  									<label>
-  										Пароль <input type="password" name="login-password" placeholder="********">
-  									</label>
-  								</p>
-  								<button class="button" type="submit">Войти</button>
-  								<p class="links">
-  									<a href="#">Забыли пароль?</a>
-  									<a href="#">Новая регистрация</a>
-  								</p>
+                  <div class="login-wrapper">
+    								<p class="login-item">
+    									<label>
+    										Электронная почта <input type="email" name="login-email" placeholder="email@example.com">
+    									</label>
+    								</p>
+    								<p class="login-item">
+    									<label>
+    										Пароль <input type="password" name="login-password" placeholder="********">
+    									</label>
+    								</p>
+    								<button class="button" type="submit">Войти</button>
+    								<p class="links">
+    									<a href="#">Забыли пароль?</a>
+    									<a href="#">Новая регистрация</a>
+    								</p>
+                  </div>
   							</form>
   						</li>
   					</ul>
@@ -196,31 +198,32 @@
       		<div class="subscribe-form">
             <div class="subscribe-wrapper">
   	    		<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  	    		<form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
-  	    			<label for="subscribe-email">Электронная почта</label>
-  	          <input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
-  	    			<button class="button" type="submit">Отправить</button>
-  	    		</form>
+    	    		<form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
+    	    			<label for="subscribe-email">Электронная почта</label>
+    	          <input type="email" name="subscribe-email" id="subscribe-email" placeholder="email@example.com" required>
+    	    			<button class="button" type="submit">Отправить</button>
+    	    		</form>
             </div>
       		</div>
         </div>
     	</section>
 
-    	<section class="map">
-  	    	<h2>Как добраться</h2>
-      		<div class="map-help">
-  	    		<p class="address">Адрес главного офиса <br>и офлайн-магазина:
-  	    			<strong>наб. Реки Карповки, 
-              5 лит П, Санкт-Петербург</strong>
-  	    		</p>
-  	    		<p class="contacts">Для заказов по телефону:
-  	    			<strong>+7 800 555-86-28</strong> 
-  	    			(с 10 до 20 ежедневно)
-  	    		</p>
-  	    		<a class="button" href="#">Форма обратной связи</a>
-      		</div>
-    	</section>
     </main>
+
+    <section class="map">
+      <h2>Как добраться</h2>
+      <div class="map-help">
+        <p class="address">Адрес главного офиса <br>и офлайн-магазина:
+          <strong>наб. Реки Карповки, 
+          5 лит П, Санкт-Петербург</strong>
+        </p>
+        <p class="contacts">Для заказов по телефону:
+          <strong>+7 800 555-86-28</strong> 
+          (с 10 до 20 ежедневно)
+        </p>
+        <a class="button" href="#">Форма обратной связи</a>
+      </div>
+    </section>
 
     <footer class="main-footer">
     	<section class="footer-social">
