@@ -54,18 +54,17 @@
   					<a class="user-button login-button" href="blank.html">Вход</a>
   					<ul class="login-form">
   						<li>
-  							<h2>Личный кабинет</h2>
+  							<h2 class="visually-hidden">Личный кабинет</h2>
   							<form method="post" action="https://echo.htmlacademy.ru">
                   <div class="login-wrapper">
     								<p class="login-item">
-    									<label>
-    										Электронная почта <input type="email" name="login-email" placeholder="email@example.com">
-    									</label>
+    									<label class="visually-hidden" for="login-email">Электронная почта</label> 
+                      <input type="email" name="login-email" placeholder="email@example.com" id="login-email">
     								</p>
     								<p class="login-item">
-    									<label>
-    										Пароль <input type="password" name="login-password" placeholder="********">
-    									</label>
+    									<label class="visually-hidden" for="login-password">Пароль</label> 
+                      <input type="password" name="login-password" placeholder="********">
+    									
     								</p>
     								<button class="button" type="submit">Войти</button>
     								<p class="links">
@@ -264,24 +263,26 @@
     </div>
 
 
-    <!-- <section class="callback-modal">
-    	<h2>Обратная связь</h2>
+    <section class="callback-modal">
+    	<h2 class="visually-hidden">Обратная связь</h2>
     	<p class="callback-title">Мы обязательно вам ответим!</p>
     	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
-	    	<p class="callback-field">
-	    		<label for="callback-name">Имя и фамилия</label>
-	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
-	    	</p>
-	    	<p class="callback-field">
-	    		<label for="callback-email">Электронная почта</label>
-      			<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
-	    	</p>
-	    	<p>
-	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
-	    	</p>
-	    	<button class="button" type="submit">Отправить</button>
+        <div class="callback-modal-wrapper">
+  	    	<p class="callback-field">
+  	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
+  	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
+  	    	</p>
+  	    	<p class="callback-field">
+  	    		<label class="visually-hidden" for="callback-email">Электронная почта</label>
+        		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
+  	    	</p>
+  	    	<p>
+  	    		<textarea rows="6" name="callback-text" placeholder="В свободной форме"></textarea>
+  	    	</p>
+  	    	<button class="button" type="submit">Отправить</button>
+        </div>
     	</form>
     	<button class="modal-close" type="button">Закрыть</button>
-    </section> -->
+    </section>
   </body>
 </html>

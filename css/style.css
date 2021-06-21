@@ -247,8 +247,14 @@ a {
 
 .login-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: min-content 1fr;
 	grid-template-rows: min-content min-content 1fr;
+	margin-right: 0;
+}
+
+.login-wrapper p {
+	margin: 0;
+	padding: 0;
 }
 
 .login-item {
@@ -263,21 +269,33 @@ a {
 .login-form {
 	display: none;
 	position: absolute;
+	right: 0px;
+	top: 26px;
 	background-color: var(--basic-light-grey);
 	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
 	border-radius: 4px;
+	padding-top: 20px;
 	padding-left: 19px;
-	padding-right: 16px;
+	padding-bottom: 22px;
+	width: 258px;
+}
 
+.login-form li {
+	margin: 0;
+	padding: 0;
 }
 
 .login-wrapper .button {
 	grid-column: 1 / 2;
+	width: min-content;
+	padding: 10px 25px;
+	margin-right: 20px;
 }
 
 .links {
-	grid-column: 2 / 3;
+	white-space: pre-line;
 }
+
 
 .login:hover .login-form {
 	display: block;
@@ -285,10 +303,13 @@ a {
 
 .login-form input {
 	border: 1px solid var(--basic-extra-grey);
-	line-height: 20px;
+	line-height: 13px;
 	font-weight: 700;
 	background-color: var(--basic-white);
-	margin: 20px 0;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	width: 209px;
+	padding: 13px 15px;
 }
 
 .login-form input:hover {
@@ -344,6 +365,10 @@ a {
 	color: var(--basic-red);
 }
 
+.no-empty-cart {
+	position: relative;
+}
+
 .empty-cart .cart-button:hover {
 	background-color: var(--basic-white);
 	color: var(--basic-black);
@@ -356,6 +381,7 @@ a {
 
 .shopping-list {
 	display: none;
+	position: absolute;
 	background-color: var(--basic-light-grey);
 	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
 	border-radius: 4px;
@@ -363,6 +389,20 @@ a {
 	font-size: 13px;
 	line-height: 16px;
 	font-weight: 400;
+	width: 539px;
+	right: 0px;
+	top: 36px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.shopping-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 20px 0;
+	padding-left: 21px;
+	padding-right: 14px;
 }
 
 .cart-item a {
@@ -372,8 +412,25 @@ a {
 	font-weight: 400;
 }
 
-.no-empty-cart:hover .shopping-list {
+.shopping-btn {
+	padding: 10px 15px;
+}
+
+.cart-item {
+	align-self: stretch;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.no-empty-cart:hover .shopping-list,
+.no-empty-cart:focus .shopping-list {
 	display: block;
+}
+
+.item-cost {
+	padding-right: 20px;
 }
 
 .full-cost {
@@ -419,8 +476,15 @@ a {
 	/*padding: 9px 23px;*/
 }
 
-.page-body .visually-hidden {
-	visibility: hidden;
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 
 .slider-controls {
@@ -552,7 +616,7 @@ a {
 	content: "";
 	position: absolute;
 	display: none;
-	z-index: 3;
+	z-index: 5;
 	top: -6px;
 	left: -13px;
 	
@@ -564,15 +628,21 @@ a {
 	width: calc(100% + 26px);
 }
 
-.ice-cream-card:hover::after {
+.ice-cream-card:hover::after,
+.ice-cream-card:focus::after {
 	display: block;
+}
+
+.ice-cream-card:hover .ice-cream-pic,
+.ice-cream-card:focus .ice-cream-pic {
+	z-index: 6;
 }
 
 .ice-cream-pic {
 	max-width: 100%;
   	height: auto;
   	margin-bottom: 13px;
-	z-index: 6;
+	z-index: 4;
 }
 
 .ice-cream-card .button {
@@ -588,7 +658,8 @@ a {
 	padding: 12px 16px;
 }
 
-.ice-cream-card:hover .button {
+.ice-cream-card:hover .button,
+.ice-cream-card:focus .button {
 	display: block;
 }
 
@@ -854,49 +925,84 @@ a {
 
 
 .callback-modal {
+	position: relative;
 	background-color: var(--basic-light-grey);
 	border-radius: 6px;
 	color: var(--basic-black);
 	line-height: 20px;
 	font-weight: 400;
+	width: 477px;
+	margin: 0 auto;
+	padding-left: 23px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	box-sizing: border-box;
 }
 
-.callback-title {
+.callback-modal p {
+	margin: 0;
+}
+
+.callback-modal-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1px;
+}
+
+.callback-modal .callback-title {
 	font-size: 24px;
-	line-height: 28px;
 	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 26px;
 }
 
-.callback-modal input {
-	border: 1px solid var(--basic-extra-grey);
-	line-height: 20px;
-	font-weight: 700;
-	background-color: var(--basic-white);	
-}
-
-.callback-modal input:hover {
-	border: 2px solid var(--basic-extra-grey);
-}
-
-.callback-modal input:focus {
-	border: 2px solid var(--basic-extra-blue);
-}
-
+.callback-modal input,
 .callback-modal textarea {
 	border: 1px solid var(--basic-extra-grey);
+	border-radius: 4px;
 	line-height: 20px;
 	font-weight: 700;
 	background-color: var(--basic-white);	
 }
 
+.callback-modal input:hover,
 .callback-modal textarea:hover {
 	border: 2px solid var(--basic-extra-grey);
 }
 
+.callback-modal input:focus,
 .callback-modal textarea:focus {
 	border: 2px solid var(--basic-extra-blue);
 }
 
+.callback-modal .button {
+	align-self: flex-end;
+	padding: 10px 24px;
+}
+
+.modal-close {
+	position: absolute;
+	top: 15px;
+	right: 16px;
+}
+
+.callback-modal textarea {
+	width: 428px;
+	resize: none; 
+	padding: 16px 14px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+ .callback-modal .callback-field {
+ 	margin-bottom: 20px;
+ }
+
+ .callback-modal input {
+ 	padding: 11px 14px;
+ }
 
 
 /*catalog style*/
