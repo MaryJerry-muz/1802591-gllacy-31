@@ -47,23 +47,23 @@
   					<a class="user-button login-button" href="blank.html">Вход</a>
   					<ul class="login-form">
   						<li>
-  							<h2>Личный кабинет</h2>
+  							<h2 class="visually-hidden">Личный кабинет</h2>
   							<form method="post" action="https://echo.htmlacademy.ru">
-  								<p class="login-item">
-  									<label>
-  										Электронная почта <input type="email" name="login-email" placeholder="email@example.com">
-  									</label>
-  								</p>
-  								<p class="login-item">
-  									<label>
-  										Пароль <input type="password" name="login-password" placeholder="********">
-  									</label>
-  								</p>
-  								<button class="button" type="submit">Войти</button>
-  								<p class="links">
-  									<a href="#">Забыли пароль?</a>
-  									<a href="#">Новая регистрация</a>
-  								</p>
+                  <div class="login-wrapper">
+    								<p class="login-item">
+                      <label class="visually-hidden" for="login-email">Электронная почта</label> 
+                      <input type="email" name="login-email" placeholder="email@example.com" id="login-email">
+                    </p>
+                    <p class="login-item">
+                      <label class="visually-hidden" for="login-password">Пароль</label> 
+                      <input type="password" name="login-password" placeholder="********"> 
+                    </p>
+    								<button class="button" type="submit">Войти</button>
+    								<p class="links">
+    									<a href="#">Забыли пароль?</a>
+    									<a href="#">Новая регистрация</a>
+    								</p>
+                  </div>
   							</form>
   						</li>
   					</ul>
