@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
 
@@ -21,7 +21,7 @@
   				<li class="navigation-item catalog-item">
   					<a class="active" href="catalog.html">Каталог</a>
   					<ul class="subnavigation">
-  						<li class="subnavigation-item"><p>Новинки</p></li>
+  						<li class="subnavigation-item"><p class="novelty">Новинки</p></li>
   						<li class="subnavigation-item"><a class="active" href="catalog.html">Сливочное</a></li>
   						<li class="subnavigation-item"><a href="#">Щербеты</a></li>
   						<li class="subnavigation-item"><a href="#">Фруктовый лед</a></li>
@@ -111,7 +111,7 @@
     							<span class="item-cost">450 руб.</span>
     						</li>
     						<p class="full-cost">
-    							Итого: 750 руб.
+    							Итого:&nbsp 750 руб.
     						</p>
     						<a class="button shopping-btn" href="blank.html">Оформить заказ</a>
               </div>
@@ -165,10 +165,11 @@
               <div class="price-filter">
                 <div class="price-controls">
                   <label class="min-price">
-                    <input type="number" name="min-price" value="100"> ₽ –  
+                    <input type="number" name="min-price" value="100"> &#8381;  
                   </label>
+                  &ndash;
                   <label class="max-price">
-                    <input type="number" name="max-price" value="500"> ₽
+                    <input type="number" name="max-price" value="500"> &#8381;
                   </label>
                 </div>
 
@@ -176,8 +177,8 @@
                   <div class="scale">
                     <div class="bar" style="width: 60%; margin-left: 10%"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" style="left: 15%"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="left: 60%"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 16%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 61%"></div>
                 </div>
               </div>
     				</fieldset>
@@ -267,7 +268,7 @@
   						<span class="price-tag">415 ₽</span>/кг
   					</p>
   					<img class="ice-cream-pic" src="img/catalog/ice_cream4.png" width="267" height="267" alt="Сливочное мороженое крем-брюле с карамельной подливкой">
-  					<a class="description" href="">Сливочное крем-брюле с карамельной подливкой</a>
+  					<a class="description" href="">Сливочное крем-брюле с&nbsp;карамельной подливкой</a>
   					<button class="button" type="button">Быстрый просмотр</button>
   				</li>
   				<li class="ice-cream-card">
@@ -311,7 +312,7 @@
   					<img class="ice-cream-pic" src="img/catalog/ice_cream9.png" width="267" height="267" alt="Сливочно-ванильное мороженое
 					с кусочками шоколада">
   					<a class="description" href="">Сливочно-ванильное
-					с кусочками шоколада</a>
+					с&nbsp;кусочками&nbsp;шоколада</a>
   					<button class="button" type="button">Быстрый просмотр</button>
   				</li>
   				<li class="ice-cream-card">
@@ -399,8 +400,8 @@
     		<h2 class="visually-hidden">Информация</h2>
     		<ul class="footer-information-list">
           <li><a class="footer-info-item" href="#"><b>Для поставщиков</b></a></li>
-          <li><a class="footer-info-item" href="#">О производстве</a></li>
           <li><a class="footer-info-item" href="#">Наши документы</a></li>
+          <li><a class="footer-info-item" href="#">О производстве</a></li>
           <li><a class="footer-info-item" href="#">Экологические стандарты</a></li>
         </ul>
     	</section>

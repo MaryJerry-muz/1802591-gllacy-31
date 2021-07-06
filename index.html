@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
 
@@ -22,7 +22,7 @@
   				<li class="navigation-item catalog-item"><a href="catalog.html">
             <span class="navigation-decor">Каталог</span></a>
   					<ul class="subnavigation">
-  						<li class="subnavigation-item"><p>Новинки</p></li>
+  						<li class="subnavigation-item"><p class="novelty">Новинки</p></li>
   						<li class="subnavigation-item"><a href="catalog.html">Сливочное</a></li>
   						<li class="subnavigation-item"><a href="#">Щербеты</a></li>
   						<li class="subnavigation-item"><a href="#">Фруктовый лед</a></li>
@@ -72,7 +72,6 @@
     								<p class="login-item">
     									<label class="visually-hidden" for="login-password">Пароль</label> 
                       <input type="password" name="login-password" placeholder="********">
-    									
     								</p>
     								<button class="button" type="submit">Войти</button>
     								<p class="links">
@@ -171,7 +170,7 @@
     					<span class="price-tag">355 ₽</span>/кг
     				</p>
     				<img class="ice-cream-pic" src="img/catalog/ice_cream3.png" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
-    				<a class="description" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+    				<a class="description" href="">Сливочно-клубничное с&nbsp;присыпкой из белого шоколада</a>
     				<button class="button" type="button">Быстрый просмотр</button>
     			</li>
     			<li class="ice-cream-card hit">
@@ -179,7 +178,7 @@
     					<span class="price-tag">415 ₽</span>/кг
     				</p>
     				<img class="ice-cream-pic" src="img/catalog/ice_cream4.png" width="267" height="267" alt="Сливочное мороженое крем-брюле с карамельной подливкой">
-    				<a class="description" href="">Сливочное крем-брюле с карамельной подливкой</a>
+    				<a class="description" href="">Сливочное крем-брюле с&nbsp;карамельной подливкой</a>
     				<button class="button" type="button">Быстрый просмотр</button>
     			</li>
     		</ul>
@@ -193,7 +192,7 @@
       			<li class="about-ice-cream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
             <li class="about-ingredients">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
       			<li class="about-raw">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-      			<li class="about-temperature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+      			<li class="about-temperature">Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
       		</ul>
         </div>
     	</section>
@@ -203,7 +202,7 @@
         <div class="news-wrapper">
       		<article class="news">
       			<h3>Новое в нашем блоге</h3>
-      			<a class="news-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      			<a class="news-caption" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
       		</article>
       		<div class="subscribe-form">
             <div class="subscribe-wrapper">
@@ -222,6 +221,7 @@
 
     <section class="map">
       <h2 class="visually-hidden">Как добраться</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.3516025000271!2d30.315918999856052!3d59.96866326938939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bdb8347a1%3A0x30576fe611818343!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQu9C40YLQvywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1625158003289!5m2!1sru!2sru" width="1200" height="430" allowfullscreen></iframe>
       <div class="map-help">
         <p class="address">Адрес главного офиса <br>и офлайн-магазина:
           <strong>наб. Реки Карповки, 
@@ -266,17 +266,17 @@
     		<h2 class="visually-hidden">Информация</h2>
     		<ul class="footer-information-list">
     			<li><a class="footer-info-item" href="#"><b>Для поставщиков</b></a></li>
-    			<li><a class="footer-info-item" href="#">О производстве</a></li>
     			<li><a class="footer-info-item" href="#">Наши документы</a></li>
+    			<li><a class="footer-info-item" href="#">О производстве</a></li>
     			<li><a class="footer-info-item" href="#">Экологические стандарты</a></li>
     		</ul>
     	</section>
 
     	<div class="footer-copyright">
 	    	<a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
-	            <img src="img/logo_HTML_Academy.svg" width="107.89" height="30.99" alt="Логотип HTML Academy">
-	          </a>
-	          <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
+	       <img src="img/logo_HTML_Academy.svg" width="107.89" height="30.99" alt="Логотип HTML Academy">
+	      </a>
+	      <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
       </div>
     </footer>
     </div>
@@ -296,12 +296,14 @@
         		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
   	    	</p>
   	    	<p>
-  	    		<textarea rows="6" name="callback-text" placeholder="В свободной форме"></textarea>
+  	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
   	    	</p>
   	    	<button class="button" type="submit">Отправить</button>
         </div>
     	</form>
-    	<button class="modal-close" type="button">Закрыть</button>
+    	<button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
