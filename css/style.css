@@ -114,7 +114,8 @@ a {
 
 
 
-.catalog-item:hover .subnavigation {
+.catalog-item:hover .subnavigation,
+.catalog-item:focus .subnavigation {
 	display: block;
 }
 
@@ -264,6 +265,9 @@ a {
 	line-height: 24px;
 	margin-top: 8px;
 	margin-bottom: 0;
+	width: min-content;
+	white-space: nowrap;
+	justify-self: flex-end;
 
 	grid-column: 2 / 3;
 	grid-row: 2 / 3;
@@ -1209,7 +1213,8 @@ a {
   	opacity: 0.7;
 }
 
-.fb-button:hover::before {
+.fb-button:hover::before,
+.fb-button:focus::before {
 	opacity: 1;
 }
 
@@ -1226,7 +1231,8 @@ a {
   	opacity: 0.7;
 }
 
-.vk-button:hover::before {
+.vk-button:hover::before,
+.vk-button:focus::before {
 	opacity: 1;
 }
 
@@ -1243,7 +1249,8 @@ a {
   	opacity: 0.7;
 }
 
-.inst-button:hover::before {
+.inst-button:hover::before,
+.inst-button:focus::before {
 	opacity: 1;
 }
 
@@ -1260,7 +1267,8 @@ a {
   	opacity: 0.7;
 }
 
-.twit-button:hover::before {
+.twit-button:hover::before,
+.twit-button:focus::before {
 	opacity: 1;
 }
 
