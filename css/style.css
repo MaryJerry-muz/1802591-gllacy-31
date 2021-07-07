@@ -115,7 +115,7 @@ a {
 
 
 .catalog-item:hover .subnavigation,
-.catalog-item:focus .subnavigation {
+.catalog-item:focus-within .subnavigation {
 	display: block;
 }
 
@@ -206,9 +206,9 @@ a {
 }
 
 .subnavigation-item:hover a,
-.subnavigation-item:focus a {
+.subnavigation-item:focus-within a {
 	background-color: #FBDED7;
-	border-radius: 4px;
+	border-radius: 0;
 }
 
 .subnavigation-item:active a {
@@ -327,7 +327,7 @@ a {
 }
 
 .search-plate:hover .search-field,
-.search-plate:focus .search-field {
+.search-plate:focus-within .search-field {
 	display: block;
 }
 
@@ -427,7 +427,8 @@ a {
 	justify-content: space-around;
 }
 
-.login:hover .login-form {
+.login:hover .login-form,
+.login:focus-within .login-form {
 	display: block;
 }
 
@@ -609,7 +610,7 @@ a {
 }
 
 .no-empty-cart:hover .shopping-list,
-.no-empty-cart:focus .shopping-list {
+.no-empty-cart:focus-within .shopping-list {
 	display: block;
 }
 
@@ -844,7 +845,7 @@ a {
 }
 
 .ice-cream-card:hover::after,
-.ice-cream-card:focus::after {
+.ice-cream-card:focus-within::after {
 	display: block;
 }
 
@@ -875,7 +876,7 @@ a {
 }
 
 .ice-cream-card:hover .button,
-.ice-cream-card:focus .button {
+.ice-cream-card:focus-within .button {
 	display: block;
 }
 
@@ -1328,8 +1329,10 @@ li:first-child .footer-info-item::before {
 
 
 .callback-modal {
-	display: none;
-	position: fixed;
+	position: absolute;
+	visibility: hidden;
+  	opacity: 0;
+  	transition: .3s;
 	top: 338px;
 	left: 0;
 	right: 0;
@@ -1347,6 +1350,13 @@ li:first-child .footer-info-item::before {
 	padding-right: 25px;
 	box-sizing: border-box;
 	z-index: 15;
+}
+
+.page-body .opened {
+	position: fixed;
+	visibility: visible;
+	opacity: 1;
+	transition: .3s;
 }
 
 .callback-modal p {
@@ -1610,7 +1620,8 @@ li:first-child .footer-info-item::before {
 	color: var(--basic-black);
 }
 
-.sorting-filter:hover ~ svg path {
+.sorting-filter:hover ~ svg path,
+.sorting-filter:focus ~ svg path {
 	fill: var(--basic-black);
 }
 

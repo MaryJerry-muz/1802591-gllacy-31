@@ -231,7 +231,7 @@
           <strong>+7 800 555-86-28</strong> 
           (с 10 до 20 ежедневно)
         </p>
-        <a class="button" href="#">Форма обратной связи</a>
+        <button class="button modal-button" href="#">Форма обратной связи</button>
       </div>
     </section>
 
@@ -283,27 +283,28 @@
 
 
     <section class="callback-modal">
-    	<h2 class="visually-hidden">Обратная связь</h2>
-    	<p class="callback-title">Мы обязательно вам ответим!</p>
-    	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
-        <div class="callback-modal-wrapper">
-  	    	<p class="callback-field">
-  	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
-  	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
-  	    	</p>
-  	    	<p class="callback-field">
-  	    		<label class="visually-hidden" for="callback-email">Электронная почта</label>
-        		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
-  	    	</p>
-  	    	<p>
-  	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
-  	    	</p>
-  	    	<button class="button" type="submit">Отправить</button>
-        </div>
-    	</form>
-    	<button class="modal-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      	<h2 class="visually-hidden">Обратная связь</h2>
+      	<p class="callback-title">Мы обязательно вам ответим!</p>
+      	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
+          <div class="callback-modal-wrapper">
+    	    	<p class="callback-field">
+    	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
+    	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
+    	    	</p>
+    	    	<p class="callback-field">
+    	    		<label class="visually-hidden" for="callback-email">Электронная почта</label>
+          		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
+    	    	</p>
+    	    	<p>
+    	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
+    	    	</p>
+    	    	<button class="button" type="submit">Отправить</button>
+          </div>
+      	</form>
+      	<button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
+
+    <script type="text/javascript" src="js/modal.js"></script>
+
   </body>
 </html>
