@@ -68,16 +68,19 @@ a {
 .site-wrapper-1 {
 	background-color: var(--basic-green);
 	background-image: url("../img/ice_cream_slide1.png");
+	transition: .3s;
 }
 
 .site-wrapper-2 {
 	background-color: var(--basic-blue);
 	background-image: url("../img/ice_cream_slide2.png");
+	transition: .3s;
 }
 
 .site-wrapper-3 {
 	background-color: var(--basic-brown);
 	background-image: url("../img/ice_cream_slide3.png");
+	transition: .3s;
 }
 
 /*   ____________    */
@@ -1333,7 +1336,7 @@ li:first-child .footer-info-item::before {
 	visibility: hidden;
   	opacity: 0;
   	transition: .3s;
-	top: 338px;
+	top: 20vh/*338px*/;
 	left: 0;
 	right: 0;
 	bottom: auto;
@@ -1350,6 +1353,15 @@ li:first-child .footer-info-item::before {
 	padding-right: 25px;
 	box-sizing: border-box;
 	z-index: 15;
+}
+
+.modal-background {
+	position: fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.6);
+	z-index: 14;
+	transition: .3s;
 }
 
 .page-body .opened {
@@ -1707,6 +1719,7 @@ li:first-child .footer-info-item::before {
 	left: 135px;
 }
 
+
 .fatness label,
 .fillers label {
 	position: relative;
@@ -1723,6 +1736,12 @@ li:first-child .footer-info-item::before {
 
 .fillers-filter-item:last-child {
 	margin-right: 8px;
+}
+
+.filter-input-radio,
+.filter-input-checkbox {
+	opacity: 0;
+	position: absolute;
 }
 
 .filter-input-radio + label::before {
@@ -1773,7 +1792,10 @@ li:first-child .footer-info-item::before {
 
 .filter-input-checkbox + label:hover::before,
 .filter-input-radio + label:hover::before,
-.filter-input-radio + label:hover::after {
+.filter-input-radio + label:hover::after,
+.filter-input-checkbox:focus-within + label::before,
+.filter-input-radio:focus-within + label::before,
+.filter-input-radio:focus-within + label::after {
 	opacity: 1;
 }
 

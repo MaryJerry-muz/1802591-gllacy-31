@@ -110,23 +110,23 @@
     		<h2 class="visually-hidden">Варианты мороженого</h2>        
         
     		<ul class="slider-list">
-    			<li class="slider-item slide1 active-slide">
+    			<li class="slider-item active-slide">
     				<h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
     				<a class="button" href="#">Давайте оба!</a>
     			</li>
-    			<li class="slider-item slide2">
+    			<li class="slider-item">
     				<h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
     				<a class="button" href="#">Давайте оба!</a>
     			</li>
-    			<li class="slider-item slide3">
+    			<li class="slider-item">
     				<h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
     				<a class="button" href="#">Давайте оба!</a>
     			</li>
     		</ul>
     		<div class="slider-controls">
-    			<button class="active" type="button" aria-lebel="Первый слайд"></button>
-          <button type="button" aria-lebel="Второй слайд"></button>
-          <button type="button" aria-lebel="Третий слайд"></button>
+    			<button class="slider-control active" type="button" aria-lebel="Первый слайд"></button>
+          <button class="slider-control" type="button" aria-lebel="Второй слайд"></button>
+          <button class="slider-control" type="button" aria-lebel="Третий слайд"></button>
     		</div>
     	</section>
 
@@ -281,30 +281,32 @@
     </footer>
     </div>
 
-
-    <section class="callback-modal">
-      	<h2 class="visually-hidden">Обратная связь</h2>
-      	<p class="callback-title">Мы обязательно вам ответим!</p>
-      	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
-          <div class="callback-modal-wrapper">
-    	    	<p class="callback-field">
-    	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
-    	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
-    	    	</p>
-    	    	<p class="callback-field">
-    	    		<label class="visually-hidden" for="callback-email">Электронная почта</label>
-          		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
-    	    	</p>
-    	    	<p>
-    	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
-    	    	</p>
-    	    	<button class="button" type="submit">Отправить</button>
-          </div>
-      	</form>
-      	<button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </section>
+    <div class="modal-wrapper">
+      <section class="callback-modal">
+        	<h2 class="visually-hidden">Обратная связь</h2>
+        	<p class="callback-title">Мы обязательно вам ответим!</p>
+        	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
+            <div class="callback-modal-wrapper">
+      	    	<p class="callback-field">
+      	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
+      	    		<input type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
+      	    	</p>
+      	    	<p class="callback-field">
+      	    		<label class="visually-hidden" for="callback-email">Электронная почта</label>
+            		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
+      	    	</p>
+      	    	<p>
+      	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
+      	    	</p>
+      	    	<button class="button" type="submit">Отправить</button>
+            </div>
+        	</form>
+        	<button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </section>
+    </div>
 
     <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 
   </body>
 </html>
