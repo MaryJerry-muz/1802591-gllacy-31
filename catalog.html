@@ -70,7 +70,7 @@
                     </p>
                     <p class="login-item">
                       <label class="visually-hidden" for="login-password">Пароль</label> 
-                      <input type="password" name="login-password" placeholder="********"> 
+                      <input type="password" name="login-password" id="login-password" placeholder="********"> 
                     </p>
     								<button class="button" type="submit">Войти</button>
     								<p class="links">
@@ -86,8 +86,8 @@
   				<li class="cart no-empty-cart">
   					<a class="user-button cart-button" href="#">2 товара</a>
             <h2 class="visually-hidden">Корзина</h2>
-  					<ul class="shopping-list">
               <div class="shopping-wrapper">
+  					   <ul class="shopping-list">
     						<li class="cart-item">
     							<button class="delete-cart-item" type="button">
                     <span class="visually-hidden">Удалить</span>
@@ -110,12 +110,14 @@
     							<span class="cost-calc">1,5 кг х <span class="cart-price">300 руб.</span></span>
     							<span class="item-cost">450 руб.</span>
     						</li>
-    						<p class="full-cost">
-    							Итого:&nbsp 750 руб.
-    						</p>
-    						<a class="button shopping-btn" href="blank.html">Оформить заказ</a>
-              </div>
-  					</ul>
+               </ul>
+               <div class="order-wrapper">
+      					 <p class="full-cost">
+      							Итого:&nbsp; 750 руб.
+      					 </p>
+      					 <a class="button shopping-btn" href="blank.html">Оформить заказ</a> 
+               </div>
+            </div>
   				</li>
 
   			</ul>
@@ -143,7 +145,7 @@
   		<h1>Сливочное мороженое</h1>
 
   		<section class="filters">
-  			<h1 class="visually-hidden">Фильтры для поиска мороженого</h1>
+  			<h2 class="visually-hidden">Фильтры для поиска мороженого</h2>
   			<form method="get" action="https://echo.htmlacademy.ru" target="_blank">
           <div class="filters-wrapper">
 
@@ -187,19 +189,19 @@
     					<legend>Жирность:</legend>
     						<ul class="fat-filter-list">
   		  					<li class="fat-filter-item">
-  		  						<input class="filter-input-radio" type="radio" name="fat-filter" value="0" id="fat-filter-0">
+  		  						<input class="filter-input-radio visually-hidden" type="radio" name="fat-filter" value="0" id="fat-filter-0">
                     <label for="fat-filter-0">0%</label>
   		  					</li>
   		  					<li class="fat-filter-item">
-  		  						<input class="filter-input-radio" type="radio" name="fat-filter" value="10" id="fat-filter-10" checked>
+  		  						<input class="filter-input-radio visually-hidden" type="radio" name="fat-filter" value="10" id="fat-filter-10" checked>
   		  						<label for="fat-filter-10">до 10%</label>
   		  					</li>
   		  					<li class="fat-filter-item">
-  		  						<input class="filter-input-radio" type="radio" name="fat-filter" value="30" id="fat-filter-30">
+  		  						<input class="filter-input-radio visually-hidden" type="radio" name="fat-filter" value="30" id="fat-filter-30">
   		  						<label for="fat-filter-30">до 30%</label>
   		  					</li>
   		  					<li class="fat-filter-item">
-  		  						<input class="filter-input-radio" type="radio" name="fat-filter" value="more-30" id="fat-filter-more-30">
+  		  						<input class="filter-input-radio visually-hidden" type="radio" name="fat-filter" value="more-30" id="fat-filter-more-30">
   		  						<label for="fat-filter-more-30">выше 30%</label>
   		  					</li>
   		  				</ul>
@@ -209,23 +211,23 @@
     					<legend>Наполнители:</legend>
     					<ul class="fillers-filter-list">
     						<li class="fillers-filter-item">
-    							<input class="filter-input-checkbox" type="checkbox" name="choco" id="filler-choco" checked>
+    							<input class="filter-input-checkbox visually-hidden" type="checkbox" name="choco" id="filler-choco" checked>
                   <label for="filler-choco">шоколадные</label>
     						</li>
     						<li class="fillers-filter-item">
-                  <input class="filter-input-checkbox" type="checkbox" name="sugar" id="filler-sugar" checked>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="sugar" id="filler-sugar" checked>
                   <label for="filler-sugar">сахарные присыпки</label>
     						</li>
     						<li class="fillers-filter-item">
-    							<input class="filter-input-checkbox" type="checkbox" name="fruit" id="filler-fruit">
+    							<input class="filter-input-checkbox visually-hidden" type="checkbox" name="fruit" id="filler-fruit">
                   <label for="filler-fruit">фрукты</label>
     						</li>
     						<li class="fillers-filter-item">
-    							<input class="filter-input-checkbox" type="checkbox" name="syrup" id="filler-syrup"> 
+    							<input class="filter-input-checkbox visually-hidden" type="checkbox" name="syrup" id="filler-syrup"> 
                   <label for="filler-syrup">сиропы</label>
     						</li>
     						<li class="fillers-filter-item">
-    							<input class="filter-input-checkbox" type="checkbox" name="jam" id="filler-jam">
+    							<input class="filter-input-checkbox visually-hidden" type="checkbox" name="jam" id="filler-jam">
                   <label for="filler-jam">джемы</label>
     						</li>
     					</ul>
@@ -408,11 +410,11 @@
 
     	<div class="footer-copyright">
     	<a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo_HTML_Academy.svg" width="107.89" height="30.99" alt="Логотип HTML Academy">
-          </a>
-          <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
-        </div>
+            <img src="img/logo_HTML_Academy.svg" width="108" height="31" alt="Логотип HTML Academy">
+      </a>
+      <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
+      </div>
     </footer>
-
+  </div>
   </body>
 </html>
