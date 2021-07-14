@@ -842,7 +842,7 @@ textarea::-webkit-input-placeholder {
 	position: absolute;
 	width: 61px;
 	height: 61px;
-	background-image: url("../img/icons/hit.svg");
+	background-image: url("../img/icons/dec_hit.svg");
 	background-color: var(--basic-white);
 	border-radius: 50%;
   	background-repeat: no-repeat;
