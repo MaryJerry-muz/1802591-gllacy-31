@@ -274,7 +274,7 @@
 
     	<div class="footer-copyright">
 	    	<a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
-	       <img src="img/logo_HTML_Academy.svg" width="108" height="31" alt="Логотип HTML Academy">
+	       <img src="img/logo_html_academy.svg" width="108" height="31" alt="Логотип HTML Academy">
 	      </a>
 	      <p>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2021</p>
       </div>
@@ -285,7 +285,7 @@
       <section class="callback-modal">
         	<h2 class="visually-hidden">Обратная связь</h2>
         	<p class="callback-title">Мы обязательно вам ответим!</p>
-        	<form name="callback" action="https://echo.htmlacademy.ru" method="post">
+        	<form class="callback-form" name="callback" action="https://echo.htmlacademy.ru" method="post">
             <div class="callback-modal-wrapper">
       	    	<p class="callback-field">
       	    		<label class="visually-hidden" for="callback-name">Имя и фамилия</label>
@@ -296,16 +296,17 @@
             		<input id="callback-email" type="email" name="callback-email" placeholder="email@example.com">
       	    	</p>
       	    	<p>
-      	    		<textarea name="callback-text" placeholder="В свободной форме"></textarea>
+                <label class="visually-hidden" for="callback-text">Напишите что-нибудь</label>
+      	    		<textarea name="callback-text" id="callback-text" placeholder="В свободной форме"></textarea>
       	    	</p>
-      	    	<button class="button" type="submit">Отправить</button>
+      	    	<button class="button submitBtn" type="submit">Отправить</button>
             </div>
         	</form>
         	<button class="modal-close" type="button" aria-label="Закрыть"></button>
       </section>
     </div>
 
-    <script src="js/modal.min.js"></script>
+    <script src="js/modal2.min.js"></script>
     <script src="js/slider2.min.js"></script>
 
   </body>
